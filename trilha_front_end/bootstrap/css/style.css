@@ -1,0 +1,25 @@
+/*
+	Desenvolvador: Lucas Augusto
+	Curso: Alura - Bootstrap
+	Data Inicio: 27/11/15;
+*/
+.navbar button{
+	color: white;
+}
+main{
+	margin-top: 60px;
+}
+.fullscreen{
+	width: 100%;
+}
+
+footer{
+	background: #333;
+	color: white;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+.tab-pane{
+	padding: 10px 0;
+}

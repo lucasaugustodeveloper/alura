@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Curso Javascript</title>
+</head>
+<body>
+<h1>Exemplo de if</h1>
+<script>
+	var salarioMensal = 500;
+
+	if(salarioMensal > 0 && salarioMensal <= 1000){
+		var bonus = salarioMensal * 0.05;
+		console.log('salarioMensal > 0 e < 1000 \n bonus é 5%');
+		console.log(bonus);
+	}else if(salarioMensal < 2000){
+		var bonus = salarioMensal * 0.10;
+		console.log('salarioMensal < 2000 \n bonus é 10%');
+		console.log(bonus);
+	}else{
+		var bonus = salarioMensal * 0.15;
+		console.log('salarioMensal > 2000 \n bonus é 15%')
+		console.log(bonus);
+	}
+</script>
+</body>
+</html>
