@@ -75,6 +75,15 @@ main p {
     padding: 1.5em 0;
 }
 
+.container > p::first-letter{
+    color: #3C1D3D;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: .2ch;
+    text-shadow: 2px 2px 2px black;
+}
+
 strong {
     font-weight: bold;
 }
@@ -96,18 +105,97 @@ em {
 
 .github {
     background-image: url(../imagens/github.png);
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+.github:hover::before,
+.github:focus::before{
+    content: "";
+    position: absolute;
+    text-indent: 0;
+    right: .75em;
+    border: 5px solid black;
+    transform: rotate(45deg);
+    top: 2em;
+    z-index: 9;
+}
+.github:hover::after,
+.github:focus::after{
+    background: black;
+    color: white;
+    content: attr(data-legenda);
+    font-size: .75em;
+    height: 2em;
+    left: -1em;
+    line-height: 1.2em;
+    position: absolute;
+    text-indent: 0;
+    top: 3em;
+    width: 10em;
 }
 
 .twitter {
     background-image: url(../imagens/twitter.png);
+    position: relative;
+}
+.twitter:hover::before,
+.twitter:focus::before{
+    content: "";
+    position: absolute;
+    text-indent: 0;
+    right: .75em;
+    border: 5px solid black;
+    transform: rotate(45deg);
+    top: 2em;
+    z-index: 9;
+}
+.twitter:hover::after,
+.twitter:focus::after{
+    background: black;
+    color: white;
+    content: attr(data-legenda);
+    font-size: .75em;
+    height: 2em;
+    left: -2.5em;
+    line-height: 1.2em;
+    position: absolute;
+    text-indent: 0;
+    top: 3em;
+    width: 10em;
 }
 
 .linkedin {
     background-image: url(../imagens/linkedin.png);
+    position: relative;
+}
+.linkedin:hover::before,
+.linkedin:focus::before{
+    content: "";
+    position: absolute;
+    text-indent: 0;
+    right: .75em;
+    border: 5px solid black;
+    transform: rotate(45deg);
+    top: 2em;
+    z-index: 9;
+}
+.linkedin:hover::after,
+.linkedin:focus::after{
+    background: black;
+    color: white;
+    content: attr(data-legenda);
+    font-size: .75em;
+    height: 2em;
+    left: -4em;
+    line-height: 1.2em;
+    position: absolute;
+    text-indent: 0;
+    top: 3em;
+    width: 10em;
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9 * 300px);
     float: left;
     padding-bottom: 4em;
 }
@@ -120,10 +208,10 @@ main {
 }
 
 .navegacao-site {
-    width: 20%;
+    width: calc(0.9 * 300px);
     float: right;
     position: relative;
-    top: 300px;
+    margin-top: 300px;
 }
 
 .minha-foto {
@@ -131,4 +219,162 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+fieldset{
+    float: left;
+    height: auto;
+    width: 100%;
+}
+fieldset:nth-child(2){
+    margin-top: .5em;
+}
+fieldset:nth-child(3){
+    margin-top: .5em;
+}
+legend{
+    font-family: "Open Sans Condensed";
+}
+label{
+    display: block;
+    float: left;
+    margin-bottom: .1em;
+    width: 100%;
+}
+label p{
+    float: left;
+}
+input{
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-top-right-radius: .3em;
+    border-bottom-right-radius: .3em;
+    font-family: inherit;
+    padding: .6em;
+    width: 100%;
+}
+input[name="assunto"]{
+    float: left;
+    margin-top: .55em;
+    width: 1em;
+}
+input:focus,
+textarea:focus{
+    background: #FFD;
+}
+input:invalid{
+    box-shadow: 0 0 3px red;
+}
+input[value="outros"] ~ input {
+  display: none;
+}
+input[value="outros"]:checked ~ input {
+  display: inline;
+}
+textarea{
+    border-radius: .3em;
+    font-family: inherit;
+    float: left;
+    width: 100%;
+}
+button{
+    background: #3C1D3D;
+    border:0px;
+    border-radius: .3em;
+    color: white;
+    font-size: 1.2em;
+    float: right;
+    height: 3em;
+    margin-top: .5em;
+    width: 10em;
+}
+button:focus,
+button:focus {
+  background-color: #8C1D3D;
+}
+
+label[for="nome"]{
+    position: relative;
+}
+
+label[for="nome"]:after{
+    background-color: #8C1D3D;
+    background-image: url("../imagens/usuario.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    content:"";
+    height: 1.90em;
+    left: 0px;
+    margin-top: .05em;
+    position: absolute;
+    top: 100%;
+    width: 2em;
+}
+
+label[for="e-mail"]{
+    position: relative;
+}
+
+label[for="e-mail"]:after{
+    background-color: #8C1D3D;
+    background-image: url("../imagens/email.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    content: "";
+    height: 1.97em;
+    left: 0px;
+    margin-top: .05em;
+    position: absolute;
+    top: 100%;
+    width: 2em;
+}
+#nome{
+    left: 2.9em;
+    position: relative;
+    width: calc(100% - 3em);
+}
+#e-mail{
+    left: 2.9em;
+    position: relative;
+    width: calc(100% - 3em);
+}
+table{
+    border-collapse: separate;
+    border-spacing: .25em;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 100%;
+}
+thead{
+    background-color: #3C1D3D;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+}
+thead th{
+    padding: 1em;
+}
+tbody{
+    text-align: center;
+}
+tbody th{
+    background-color: red;
+    color: white;
+    padding: 0.25em;
+    text-align: center;
+    vertical-align: middle;
+}
+td{
+    background-color: #eee;
+    padding: 0.25em;
+    text-align: center;
+    vertical-align: middle;
+}
+th[colspan]{
+    text-align: center;
+    font-style: italic;
+    vertical-align: middle;
 }
