@@ -1,0 +1,56 @@
+<div class="panel-header text-center jumbotron">
+	<h1>{{foto.titulo}}</h1>
+</div>
+<div class="row">
+	<p ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</p>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<form name="formulario" ng-submit="submeter()" novalidate>
+			<fieldset>
+				<legend>Descrição Foto</legend>
+				<div class="form-group">
+					<label for="titulo">Título</label>
+					<input ng-model="foto.titulo" name="titulo" type="text" class="form-control" id="titulo" required ng-maxlength="20" placeholder="Titulo da Foto">
+					<span ng-show="formulario.$submitted && formulario.titulo.$error.required" class="form-control alert-danger">
+						O titulo e obrigatório
+					</span>
+					<span ng-show="formulario.$submitted && formulario.titulo.$error.maxlength" class="form-control alert-danger">
+						Deve ter no máximo 20 caracteres
+					</span>
+				</div>
+				<div class="form-group">
+					<label for="url">URL</label>
+					<input ng-model="foto.url" name="url" type="text" class="form-control" id="url" required placeholder="Insirar uma url de foto">
+					<span ng-show="formulario.$submitted && formulario.url.$error.required" class="form-control alert-danger">
+						Url da imagem é obrigatória
+					</span>
+				</div>
+				<div class="form-group">
+					<label for="descricao">Descrição</label>
+					<textarea ng-model="foto.descricao" name="descricao" type="text" class="form-control" id="descricao" placeholder="Digite uma descrição para sua foto"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="grupo">Grupo</label>
+					<select name="grupo" id="grupo" class="form-control" required
+					ng-controller="GruposController"
+					ng-model="foto.grupo" ng-options="grupo._id as (grupo.nome | uppercase) for grupo in grupos">
+						<option value="">Selecione Grupo</option>
+					</select>
+					<span ng-show="formulario.$submitted && formulario.grupo.$error.required" class="form-control alert-danger">
+						Grupo é obrigatório
+					</span>
+				</div>
+			</fieldset>
+			<fieldset>
+				<button class="btn btn-success" type="submit" ng-disabled="formulario.$invalid">
+					Save
+				</button>
+				<a href="/" class="btn btn-primary" meu-focus>Voltar</a>
+			</fieldset>
+		</form>
+	</div>
+	<div class="col-md-6">
+		<minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+	</div>
+</div>
