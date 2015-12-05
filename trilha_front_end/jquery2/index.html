@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Curso Jquery 2</title>
 	<link rel="stylesheet" type="text/css" href="carrinho.css">
 </head>
 <body>
@@ -13,6 +14,7 @@
 					<td>Quantidade</td>
 					<td>Valor</td>
 					<td>Total</td>
+					<td></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -22,6 +24,9 @@
 					<td>1</td>
 					<td>499.99</td>
 					<td class="item-total">499.99</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/telefone.png"></td>
@@ -29,6 +34,9 @@
 					<td>2</td>
 					<td>199.99</td>
 					<td class="item-total">399.98</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/sapato.jpg"></td>
@@ -36,6 +44,9 @@
 					<td>1</td>
 					<td>99.99</td>
 					<td class="item-total">99.99</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/monitor.jpg"></td>
@@ -43,6 +54,9 @@
 					<td>1</td>
 					<td>299.00</td>
 					<td class="item-total">299.00</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/teclado.jpg"></td>
@@ -50,6 +64,9 @@
 					<td>1</td>
 					<td>100.00</td>
 					<td class="item-total">100.00</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/mouse.jpg"></td>
@@ -57,6 +74,9 @@
 					<td>1</td>
 					<td>199.00</td>
 					<td class="item-total">199.00</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 				<tr>
 					<td><img src="imagens/camiseta.jpg"></td>
@@ -64,17 +84,23 @@
 					<td>1</td>
 					<td>25.00</td>
 					<td class="item-total">25.00</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div>
-	    Valor Total: R$<span id="valor-total">0</span>
+		<button type="button" name="undo">Undo</button>
 	</div>
 	<div>
-	    Quantidade de Itens: <span id="quan-itens">0</span>
+		Valor Total: R$<span id="valor-total">0</span>
 	</div>
-<script src="jquery-2.1.4.min.js"></script>
-<script src="script.js"></script>
+	<div>
+	Quantidade de Itens: <span id="quantidade-itens">0</span>
+	</div>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="carrinho.js"></script>
 </body>
 </html>

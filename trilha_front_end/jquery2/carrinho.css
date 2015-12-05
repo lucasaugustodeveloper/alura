@@ -37,6 +37,10 @@ td {
 	border-bottom: 1px solid #ddd;
 }
 
+.recuperado{
+	background: #FE0;
+}
+
 
 .propaganda td {
 	background: #9F0;
@@ -82,3 +86,28 @@ input[type=button] {
 	margin: 2em 0;
 }
 
+button{
+	background: orange;
+	border: .1em solid darkorange;
+	border-radius: .3em;
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	padding: .5em;
+	width: 50%;
+}
+
+button[name="undo"]{
+	background: darkorange;
+	border: .1em solid orange;
+	border-radius: .3em;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 3px black;
+	color: white;
+	cursor: pointer;
+	padding: .5em;
+	width: 7em;
+}
+button[name="undo"]:active{
+	box-shadow: 0 0 0 0;
+}
