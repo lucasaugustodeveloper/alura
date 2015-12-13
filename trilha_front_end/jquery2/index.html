@@ -1,9 +1,15 @@
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Curso Jquery 2</title>
 	<link rel="stylesheet" type="text/css" href="carrinho.css">
 </head>
 <body>
+	<div class="geral">
+		<h2>Geral</h2>
+		<button name="alterna-propaganda" type="button" class="alterna-propaganda">Esconde Propaganda</button>
+		<button name="alterna-propaganda" type="button" id="mostrar-propaganda" class="alterna-propaganda">Mostrar Propaganda</button>
+	</div>
 	<div class="carrinho">
 		<h2>Carrinho entrega em Sao Paulo</h2>
 		<table>
@@ -68,16 +74,36 @@
 						<button type="button" class="remover-item">Remove</button>
 					</td>
 				</tr>
+			</tbody>
+		</table>
+		
+		<div class="resumo">
+			<div>
+				<button type="button" name="undo">Undo</button>
+			</div>
+			<div>
+				Valor Total: R$<span class="valor-total">0</span>
+			</div>
+			<div>
+				Quantidade de Itens: <span class="quantidade-itens">0</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="carrinho">
+		<h2>Carrinho entrega em Vitória</h2>
+		<table>
+			<thead>
 				<tr>
-					<td><img src="imagens/mouse.jpg"></td>
-					<td>Mouse wireless</td>
-					<td>1</td>
-					<td>199.00</td>
-					<td class="item-total">199.00</td>
-					<td>
-						<button type="button" class="remover-item">Remove</button>
-					</td>
+					<td></td>
+					<td>Nome</td>
+					<td>Quantidade</td>
+					<td>Valor</td>
+					<td>Total</td>
+					<td></td>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td><img src="imagens/camiseta.jpg"></td>
 					<td>Camiseta G</td>
@@ -90,16 +116,58 @@
 				</tr>
 			</tbody>
 		</table>
+		<div class="resumo">
+			<div>
+				<button type="button" name="undo">Undo</button>
+			</div>
+			<div>
+				Valor Total: R$<span class="valor-total">0</span>
+			</div>
+			<div>
+				Quantidade de Itens: <span class="quantidade-itens">0</span>
+			</div>
+		</div>
 	</div>
-	<div>
-		<button type="button" name="undo">Undo</button>
+
+	<div class="carrinho">
+		<h2>Carrinho entrega no Rio de Janeiro</h2>
+		<table>
+			<thead>
+				<tr>
+					<td></td>
+					<td>Nome</td>
+					<td>Quantidade</td>
+					<td>Valor</td>
+					<td>Total</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src="imagens/mouse.jpg"></td>
+					<td>Mouse wireless</td>
+					<td>1</td>
+					<td>199.00</td>
+					<td class="item-total">199.00</td>
+					<td>
+						<button type="button" class="remover-item">Remove</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="resumo">
+			<div>
+				<button type="button" name="undo">Undo</button>
+			</div>
+			<div>
+				Valor Total: R$<span class="valor-total">0</span>
+			</div>
+			<div>
+				Quantidade de Itens: <span class="quantidade-itens">0</span>
+			</div>
+		</div>
 	</div>
-	<div>
-		Valor Total: R$<span id="valor-total">0</span>
-	</div>
-	<div>
-	Quantidade de Itens: <span id="quantidade-itens">0</span>
-	</div>
+	
 	<script src="jquery-2.1.4.min.js"></script>
 	<script src="carrinho.js"></script>
 </body>

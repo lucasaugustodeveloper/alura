@@ -41,6 +41,9 @@ td {
 	background: #FE0;
 }
 
+.hovering{
+	background: #ccc;
+}
 
 .propaganda td {
 	background: #9F0;
@@ -57,25 +60,9 @@ td {
 	color: white;
 	font-size: 0.7em;
 	text-decoration: none;
-	text-transform: uppercase;
-	
+	text-transform: uppercase;	
 	display: inline-block;
 	padding: 0.5em;
-}
-
-input[type=button] {
-	background: #F90;
-	border: none;
-	color: #333;
-	text-transform: uppercase;
-
-	box-shadow: 0 1px 3px #777;
-	
-	display: block;
-	padding: 0.5em 1em;
-	margin: 1em 0;
-
-	-webkit-appearance: none;
 }
 
 .resumo {
@@ -87,14 +74,17 @@ input[type=button] {
 }
 
 button{
-	background: orange;
-	border: .1em solid darkorange;
+	background: #F90;
 	border-radius: .3em;
-	box-sizing: border-box;
-	color: white;
+	box-shadow: 0 1px 3px #777;	
+	border: none;
+	color: #333;
 	cursor: pointer;
-	padding: .5em;
-	width: 50%;
+	display: none;
+	padding: 0.5em 1em;
+	margin: 1em 0;
+	text-transform: uppercase;
+	-webkit-appearance: none;
 }
 
 button[name="undo"]{
@@ -105,9 +95,17 @@ button[name="undo"]{
 	box-shadow: 1px 1px 3px black;
 	color: white;
 	cursor: pointer;
+	display: block;
 	padding: .5em;
 	width: 7em;
 }
 button[name="undo"]:active{
 	box-shadow: 0 0 0 0;
+}
+button[name="alterna-propaganda"]{
+	display: inline-block;
+}
+
+#mostrar-propaganda{
+	display:none;
 }

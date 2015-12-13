@@ -1,5 +1,5 @@
 // var tabela = document.getElementsByTagName("table")[0];
-// document.querySelectorAll(".paciente"); // retorna uma array de lementos
+// document.querySelectorAll(".paciente"); // retorna uma array de elementos
 
 
 var btnAdicionar = document.querySelector("#adicionar-paciente");
