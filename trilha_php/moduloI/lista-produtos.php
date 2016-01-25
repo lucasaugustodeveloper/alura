@@ -30,7 +30,7 @@ include("banco-produtos.php");
 					<?= $produto['nome']; ?>
 				</td>
 				<td width="10%">
-					<?= $produto['preco']; ?>
+					R$ <?= $produto['preco']; ?>
 				</td>
 				<td width="40%">
 					<?= substr($produto['descricao'], 0, 40); ?>
@@ -39,7 +39,7 @@ include("banco-produtos.php");
 					<?= $produto['categoria_nome']; ?>
 				</td>
 				<td width="4%">
-						<a href="altera-produto.php?id=<?=$produto['id'];?>" class="btn btn-primary btn-block">
+						<a href="produto-altera-formulario.php?id=<?=$produto['id'];?>" class="btn btn-primary btn-block">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 				</td>

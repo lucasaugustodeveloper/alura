@@ -8,7 +8,7 @@
 		return $produtos;
 	}
 	function insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado){
-		$query = "INSERT INTO produtos (nome, preco,descricao, categoria_id, usado) values ('{$nome}', {$preco}, '{$descricao}', {$categoria_id}, {$usado})";
+		$query = "INSERT INTO produtos (nome, preco, descricao, categoria_id, usado) values ('{$nome}', {$preco}, '{$descricao}', {$categoria_id}, {$usado})";
 		return mysqli_query($conexao, $query);
 	}
 	function removeProduto($conexao, $id){
@@ -21,12 +21,6 @@
 		return mysqli_fetch_assoc($resultado);
 	}
 	function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado){
-		$query = "UPDATE produtos set nome = '{$nome}',
-									  preco = {$preco}, 
-									  descricao = '{$descricao}',
-									  categoria_id = ${categoria_id},
-									  usado = {$usado}
-				WHERE id = '{$id}' ";
-
-		return mysqli_query($query);
+		$query = "UPDATE produtos set nome= '{$nome}', preco= {$preco}, descricao= '{$descricao}', categoria_id= {$categoria_id}, usado= {$usado}  WHERE id = {$id} ";
+		return mysqli_query($conexao, $query);
 	}

@@ -3,7 +3,6 @@ include("includes/header.php");
 include("conectar.php");
 include("banco-produtos.php");
 
-$id = $_POST['id'];
 $nome = $_POST['nome'];
 $preco = $_POST['preco'];
 $descricao = $_POST['descricao'];
@@ -14,6 +13,10 @@ if(array_key_exists("usado", $_POST)) {
 }else{
 	$usado = "false";
 }
+
+
+
+
 ?>
 
 <div class="container">
@@ -21,9 +24,9 @@ if(array_key_exists("usado", $_POST)) {
 		<h1>Página de Produtos</h1>
 	</div>
 	<?php
-	if(alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado)){ ?>
+	if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)){ ?>
 		<p class="alert alert-success">
-			Produto <?= $nome;?> foi alterado com sucesso!
+			Produto <?= $nome;?>, com preço R$<?= $preco?> foi adicionado com sucesso!
 		</p>
 	<?php 
 	} else { 
@@ -31,11 +34,11 @@ if(array_key_exists("usado", $_POST)) {
 		?>
 		
 		<p class="alert alert-danger">
-			Produto <?= $nome; ?> não foi alterado com sucesso! <br>
+			Produto <?= $nome; ?> não foi adicionado com sucesso! <br>
+			<pre>
+				<?= $msg; ?>
+			</pre>
 		</p>
-		<pre>
-			<?= $msg; ?>
-		</pre>
 	<?php
 		}
 	?>

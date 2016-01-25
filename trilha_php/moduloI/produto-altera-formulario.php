@@ -8,16 +8,17 @@ $id = $_GET['id'];
 $produto = buscaProduto($conexao, $id);
 $categorias = listaCategorias($conexao);
 
-$usado = $produto['usado'] ? "checked = 'checked'" : "";
+$usado = $produto['usado'] ? "checked='checked'" : "";
+
 ?>
 
 <div class="container">
 	<div class="principal jumbotron text-center">
-		<h1>Alterando Produto</h1>
+		<h1>Alteração de Produto</h1>
 	</div>
 
-	<form action="produto-alterado.php" class="form-group" method="post">
-		<input type="hidden" name="id" value="<?= $produto['id']; ?>">
+	<form action="altera-produto.php" class="form-group" method="post">
+	<input type="hidden" name="id" value="<?=$produto['id'];?>" class="form-control">
 		<table class="table">
 			<tr>
 				<td>
@@ -32,7 +33,7 @@ $usado = $produto['usado'] ? "checked = 'checked'" : "";
 					<label for="preco"> Preço:</label>
 				</td>
 				<td>
-					<input type="number" name="preco" class="form-control" value="<?=$produto['preco']?>">
+					<input type="number" name="preco" class="form-control" value="<?=$produto['preco'];?>">
 				</td>
 			</tr>
 			<tr>
@@ -40,7 +41,7 @@ $usado = $produto['usado'] ? "checked = 'checked'" : "";
 					<label for="descricao">Descrição:</label>
 				</td>
 				<td>
-					<textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"><?=$produto['descricao']?></textarea>
+					<textarea name="descricao" id="descricao" cols="30" rows="10" class="form-control"><?= $produto['descricao']; ?></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -48,7 +49,7 @@ $usado = $produto['usado'] ? "checked = 'checked'" : "";
 					<p class="textoBold">Usado</p>
 				</td>
 				<td>
-					<input type="checkbox" name="usado" value="true" <?=$usado?> > Usado
+					<input type="checkbox" name="usado" value="true" <?=$usado;?>> Usado
 				</td>
 			</tr>
 			<tr>
@@ -61,8 +62,8 @@ $usado = $produto['usado'] ? "checked = 'checked'" : "";
 						$essaEhACategoria = $produto['categoria_id'] == $categoria['id'];
 						$selecao = $essaEhACategoria ? "selected='selected'" : "";
 					?>
-						<option value="<?=$categoria['id'];?>" <?=$selecao;?> >
-							<?= $categoria['nome'] ?>
+						<option value="<?=$categoria['id'];?>" <?=$selecao?>>
+							<?= $categoria['nome']; ?>
 						</option>
 					<?php endforeach; ?>
 					</select>
@@ -70,7 +71,7 @@ $usado = $produto['usado'] ? "checked = 'checked'" : "";
 			</tr>
 			<tr>
 				<td>
-					<button type="submit" class="btn btn-primary">Alterar</button>
+					<button type="submit" class="btn btn-primary">alterar</button>
 				</td>
 				<td>&nbsp;</td>
 			</tr>
