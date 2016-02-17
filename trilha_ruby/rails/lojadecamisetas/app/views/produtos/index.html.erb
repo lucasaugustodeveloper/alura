@@ -1,26 +1,20 @@
+<% if flash[:notice] %>
+	<div class="alert alert-success text-center" role="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
 <table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>Nome</th>
 			<th>Descrição</th>
 			<th>Preço</th>
-			<th>Quantidade</th>
 			<th>&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody>
-		<% @produtos_por_nome.each do |produto| %>
-		<tr>
-			<td><%= produto.nome %></td>
-			<td><%= produto.descricao %></td>
-			<td>R$ <%= produto.preco %></td>
-			<td><%= produto.quantidade %></td>
-			<td class="actionButton">
-				<%= button_to "Alterar", produto, method: :update, class: "btn btn-primary btn-block" %>
-				<%= button_to "Remover", produto, method: :delete, class: "btn btn-danger btn-block", data: {confirm: "Tem certeza que deseja remover #{produto.nome}?"} %>
-			</td>
-		</tr>
-		<% end %>
+		<%= render @produtos_por_nome %>
 	</tbody>
 </table>
 
@@ -30,17 +24,10 @@
 			<th>Nome</th>
 			<th>Descrição</th>
 			<th>Preço</th>
-			<th>Quantidade</th>
+			<th>&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody>
-		<% @produtos_por_preco.each do |produto| %>
-		<tr>
-			<td><%= produto.nome %></td>
-			<td><%= produto.descricao %></td>
-			<td>R$ <%= produto.preco %></td>
-			<td><%= produto.quantidade %></td>
-		</tr>
-		<% end %>
+		<%= render @produtos_por_preco %>
 	</tbody>
 </table>

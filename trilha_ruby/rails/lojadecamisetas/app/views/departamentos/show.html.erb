@@ -1,0 +1,11 @@
+<div id="notice alert alert-success">
+	<%= notice %>
+</div>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @departamento.nome %>
+</p>
+
+<%= link_to 'Edit', edit_departamento_path(@departamento) %> |
+<%= link_to 'Back', departamentos_path %>

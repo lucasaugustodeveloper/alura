@@ -12,7 +12,8 @@
 	<header>
 		<%= nav_bar brand: "Kunstee", brand_link: root_url do %>
 		<%= menu_group do %>
-		<%= menu_item "Novo Produto", new_produto_path %>
+			<%= menu_item "Novo Produto", new_produto_path %>
+			<%= menu_item "Departamentos", departamentos_path %>
 		<% end %>
 		<%= form_tag busca_produto_path, method: :get, class: "navbar-form navbar-right" do %>
 			<div class="form-group">
@@ -27,7 +28,7 @@
 		<%= yield %>
 	</div>
 
-	<footer class="jumbotron navbar-fixed-bottom text-center">
+	<footer class="jumbotron text-center">
 		Todos os direitos reservados a <strong>Lucas Augusto</strong>
 	</footer>
 
