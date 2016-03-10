@@ -1,0 +1,20 @@
+.container{
+	padding:0px 10%;
+}
+main{
+	margin-top: 50px;
+	float: left;
+}
+
+.error{
+	background: #ff7575;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: white;
+	display: block;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	width: 520px;
+	text-align: center;
+	text-transform: uppercase;
+}

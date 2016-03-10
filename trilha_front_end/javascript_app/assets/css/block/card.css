@@ -1,0 +1,74 @@
+.card {
+	box-sizing: border-box;
+	display: inline-block;
+	margin-top: 1em;
+	padding-left: 16px;
+	padding-right: 16px;
+	width: 25%;
+	position: relative;
+	padding-bottom: 10px;
+}
+.card p{
+	margin-top: 25px;
+	padding: 5px;
+}
+
+.wrap--card--options{
+	position: absolute;
+	margin-top: -1em;
+	left: 0px;
+	opacity: 0;
+	transition: all .2s linear;
+}
+
+.card:hover .wrap--card--options{
+	opacity: 1;
+}
+
+.card--options{
+	background: #ededed;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: center;
+	border: 2px solid rgba(0,0,0,.5);
+	border-radius: 50%;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	overflow: hidden;
+	text-indent: -999999px;
+	margin-right: -5px;
+}
+.card--options.isActive{
+	border-width: 4px;
+}
+
+.card__delete {
+	background-image: url("../../images/delete.svg");
+	margin-right: 15px;
+}
+.card__edit {
+	
+	background-image: url("../../images/edit.svg");
+}
+
+
+
+[data-color="firstColor"] {
+	background: #45AAEE;
+}
+[data-color="secondColor"] {
+	background: #FF1010;
+}
+[data-color="thirdColor"] {
+	background: #76EF40;
+}
+[data-color="fourthColor"] {
+	background: #EBEF40;
+}
+
+.card--content[contenteditable="true"]{
+	outline: 2px dashed rgba(0,0,0,.3);
+}

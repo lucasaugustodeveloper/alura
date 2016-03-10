@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>App de Lembrete</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/block/header.css">
+	<link rel="stylesheet" href="assets/css/block/newCards.css">
+	<link rel="stylesheet" href="assets/css/block/card.css">
+</head>
+<body>
+	<header class="header container">
+		<h1 class="header--title">Ceep</h1>
+		<nav class="header--menu">
+			<ul>
+				<li class="header--button">
+					<a href="">linhas</a></li>
+				<li class="header--button">
+					<a href="">?</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="newCards container">
+		<form action="" class="newCard">
+			<textarea class="newCard--content" name="" id="" cols="50" rows="5" placeholder="Digite Aqui seu lembrete"></textarea>
+			<input type="submit" value="Salvar" class="newCard--action">
+		</form>
+	</div>
+
+	<main class="container">
+		<section>
+			<ol class="wrap--card">
+				<li class="card" data-color="firstColor">
+					<nav class="wrap--card--options">
+						<ul>
+							<li class="card--options card__delete card__setting">
+								<a href="">X</a>
+							</li><li class="card--options card__edit card__setting">
+								<a href="">editar</a>
+							</li>
+							<li class="card--options isActive" data-color="firstColor">
+								<a href="">azul</a>
+							</li>
+							<li class="card--options" data-color="secondColor">
+								<a href="">vermelho</a>
+							</li>
+							<li class="card--options" data-color="thirdColor">
+								<a href="">verde</a>
+							</li>
+							<li class="card--options" data-color="fourthColor">
+								<a href="">Amarelo</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="card--content" contenteditable="false">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At temporibus eaque veniam eos tempora, optio, molestias ut neque facere totam.
+					</p>
+				</li><!--
+				--><li class="card" data-color="secondColor">
+					<nav class="wrap--card--options">
+						<ul>
+							<li class="card--options card__delete card__setting">
+								<a href="">X</a>
+							</li><li class="card--options card__edit card__setting">
+								<a href="">editar</a>
+							</li>
+							<li class="card--options" data-color="firstColor">
+								<a href="">azul</a>
+							</li>
+							<li class="card--options isActive" data-color="secondColor">
+								<a href="">vermelho</a>
+							</li>
+							<li class="card--options" data-color="thirdColor">
+								<a href="">verde</a>
+							</li>
+							<li class="card--options" data-color="fourthColor">
+								<a href="">Amarelo</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="card--content" contenteditable="false">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolores eveniet enim repellat illum dolor consequuntur mollitia fuga sapiente vero!
+					</p>
+				</li><!--
+				--><li class="card" data-color="thirdColor">
+					<nav class="wrap--card--options">
+						<ul>
+							<li class="card--options card__delete card__setting">
+								<a href="">X</a>
+							</li><li class="card--options card__edit card__setting">
+								<a href="">editar</a>
+							</li>
+							<li class="card--options" data-color="firstColor">
+								<a href="">azul</a>
+							</li>
+							<li class="card--options" data-color="secondColor">
+								<a href="">vermelho</a>
+							</li>
+							<li class="card--options isActive" data-color="thirdColor">
+								<a href="">verde</a>
+							</li>
+							<li class="card--options" data-color="fourthColor">
+								<a href="">Amarelo</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="card--content" contenteditable="false">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe iure quae porro et molestiae facere, voluptates natus delectus, libero ab.
+					</p>
+				</li><!--
+				--><li class="card" data-color="fourthColor">
+					<nav class="wrap--card--options">
+						<ul>
+							<li class="card--options card__delete card__setting">
+								<a href="">X</a>
+							</li><li class="card--options card__edit card__setting">
+								<a href="">editar</a>
+							</li>
+							<li class="card--options" data-color="firstColor">
+								<a href="">azul</a>
+							</li>
+							<li class="card--options" data-color="secondColor">
+								<a href="">vermelho</a>
+							</li>
+							<li class="card--options" data-color="thirdColor">
+								<a href="">verde</a>
+							</li>
+							<li class="card--options isActive" data-color="fourthColor">
+								<a href="">Amarelo</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="card--content" contenteditable="false">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel provident est veritatis, nam veniam rem adipisci expedita debitis! Obcaecati, sit.
+					</p>
+				</li>
+			</ol>
+		</section>
+	</main>
+<script src="assets/js/block/cards.js"></script>
+<script src="assets/js/block/newCards.js"></script>
+</body>
+</html>

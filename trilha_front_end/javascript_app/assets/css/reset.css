@@ -1,0 +1,25 @@
+* {
+	margin: 0em;
+	padding: 0em;
+	border: none;
+	outline: none;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	font-family: "Monaco";
+}
+
+a{
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+ul,ol, li{
+	list-style: none;
+}
