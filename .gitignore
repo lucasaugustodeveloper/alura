@@ -1,3 +1,2 @@
-/trilha_front_end/grunt/projeto/node_modules
-/trilha_front_end/grunt/projeto/.tmp
-/trilha_front_end/mean/catalogo-filmes/node_modules
+**/node_modules
+**/dist/**
