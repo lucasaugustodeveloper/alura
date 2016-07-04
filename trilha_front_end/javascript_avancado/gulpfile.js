@@ -22,7 +22,7 @@ gulp.task('server', function() {
 			.on('change', browserSync.reload)
 			.on('unlink', browserSync.reload);
 
-	gulp.watch('client/js/**/*.js', ['jshint'])
+	gulp.watch('client/js/app/**/*.js')
 			.on('add', browserSync.reload)
 			.on('change', browserSync.reload)
 			.on('unlink', browserSync.reload);
