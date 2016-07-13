@@ -15,19 +15,16 @@ var gulp = require('gulp'),
 
 // TASKS GULP
 gulp.task('copy', ['clean'], function() {
-
 	return gulp.src('src/**/*')
 		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', function() {
-
 	return gulp.src('dist')
 		.pipe(clean());
 });
 
 gulp.task('build-img', function() {
-
 	gulp.src('dist/img/**/*')
 	.pipe(imagemin())
 	.pipe(gulp.dest('dist/img/'));
@@ -47,7 +44,9 @@ gulp.task('server', function() {
 	browserSync.init({
 		server: {
 			baseDir: 'src'
-		}
+		},
+		open: false,
+		port: 8080
 	});
 
 	gulp.watch('src/js/*.js').on('change', function(event) {
@@ -74,6 +73,5 @@ gulp.task('server', function() {
 });
 
 gulp.task('default', ['copy'], function() {
-
 	gulp.start('build-img', 'usemin');
 });
