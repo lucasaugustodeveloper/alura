@@ -10,9 +10,14 @@ angular.module('starter')
         controller: 'listController'
       })
       .state('detail', {
-        url: '/detail',
+        url: '/detail/:carro',
         templateUrl: 'views/detail.html',
         controller: 'detailController'
+      })
+      .state('checkout', {
+        url: '/checkout/:carro',
+        templateUrl: 'views/checkout.html',
+        controller: 'checkoutController'
       });
 
   });

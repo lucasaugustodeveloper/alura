@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-nav-title>Estamos Quase Lá</ion-nav-title>
+  <ion-content>
+    <div class="card">
+      <div class="item item-divider">
+        <h1> {{checkoutCarro.nome}} </h1>
+      </div>
+      <div class="item item-text-wrap">
+        <div class="list">
+          <label for="name" class="item item-input item-stacked-label">
+            <span class="input-label">Nome Completo</span>
+            <input id="name" type="text" placeholder="Lucas" ng-model="pedido.nome">
+          </label>
+          <label for="lastname" class="item item-ipnut item-stacked-label">
+            <span class="input-label">Endereço</span>
+            <input id="lastname" type="text" placeholder="Augusto" ng-model="pedido.endereco">
+          </label>
+          <label for="email" class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input id="email" type="text" placeholder="lucasaugustodesigner@gmail.com" ng-model="pedido.email">
+          </label>
+        </div>
+      </div>
+      <div class="item item-divider">
+        Price Final: R{{checkoutCarro.preco | currency}}
+      </div>
+    </div>
+    <button href="" ng-click="finalizarPedido()" class="button button-balanced button-block">Finalizar Pedido</button>
+  </ion-content>
+</ion-view>
