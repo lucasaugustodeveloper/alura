@@ -1,0 +1,22 @@
+<head>
+	<title>SPA with MeteorJS</title>
+</head>
+
+<body>
+	<header class="container">
+		{{ > header }}		
+	</header>
+
+	<main class="container">
+			
+		{{#if currentUser  }}
+			{{ > lista }}
+		{{ else }}
+			<div class="alert alert-danger text-center">
+				Vôcê deve ser logar primeiro no sistema para utiliza-lo!
+			</div>
+		{{/if}}
+
+	</main>
+
+</body>
