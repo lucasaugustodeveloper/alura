@@ -10,10 +10,11 @@ angular.module('starter')
     ];
 
     $scope.mudou = function(acessorio, isActive) {
-      if(isActive) {
+      if (isActive) {
         $scope.detailCar.preco = $scope.detailCar.preco + acessorio.price;
       } else {
         $scope.detailCar.preco = $scope.detailCar.preco - acessorio.price;
       }
+      console.log(isActive);
     };
   });

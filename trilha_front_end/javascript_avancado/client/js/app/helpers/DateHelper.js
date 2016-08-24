@@ -2,7 +2,7 @@ class DateHelper {
 
 	constructor() {
 
-		throw new Error('Esta Classe não pode ser instanciada');
+		throw new Error('This Class not instance');
 	}
 
 	static dataParaTexto(data) {
@@ -10,7 +10,7 @@ class DateHelper {
 	}
 
 	static textoParaData(texto) {
-		if(!/\d{4}-\s{2}-\d{2}/.test(texto))
+		if(!/\d{4}-\d{2}-\d{2}/.test(texto))
 				throw new Error('Deve esta no formato yyyy-mm-dd');
 
 		return new Date(...
